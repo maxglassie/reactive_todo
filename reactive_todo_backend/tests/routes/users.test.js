@@ -3,7 +3,7 @@ const request = require('supertest');
 
 const app = require('../../app');
 
-describe('Server', () => {
+describe('users', () => {
     describe('GET /users', () => {
         it('should return "respond with a resource"', (done) => {
             request(app)
