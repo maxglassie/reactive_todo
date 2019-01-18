@@ -5,6 +5,7 @@ const logger = require('morgan');
 
 const usersRouter = require('./routes/users');
 const ekgRouter = require('./routes/ekg');
+const todosRouter = require('./routes/todos');
 
 const app = express();
 
@@ -18,5 +19,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/users', usersRouter);
 app.use('/ekg', ekgRouter);
+app.use('/todos', todosRouter);
 
 module.exports = app;
