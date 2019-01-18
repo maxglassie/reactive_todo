@@ -1,7 +1,11 @@
+'use strict'
+
 const expect = require('chai').expect;
 const request = require('supertest');
 
-const app = require('../../app');
+const app = require('../../app'); 
+const db  = require('../../db/db.js')
+
 const pry = require('pryjs')
 
 describe('Server', () => {
@@ -15,8 +19,6 @@ describe('Server', () => {
   // afterAll(
   //   // clear db
   //   )
-
-
 
   describe('GET /todos', () => {
     // data setup
@@ -42,13 +44,20 @@ describe('Server', () => {
   });
 
   describe('POST /todos', () => {
+    
+    let params   = { todos: "push to prod" }
+    let expected = { todos: "push to prod" }
+
     it('should save an item to the database', (done) => {
       request(app)
       .post('/todos')
-      .send()
+      .send(params)
       .set('Accept', 'application/json')
-    })
-  })
+      .expect(200, params, done);
+    });
+  });
+
+  // describe db
 });
 
 

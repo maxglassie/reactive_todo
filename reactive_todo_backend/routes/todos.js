@@ -1,19 +1,8 @@
+'use strict'
+
 const express = require('express');
 const router  = express.Router();
 
-// we update the object acts like a db
-// todos as a topic and Kafka stores the state?
-
-let todos_database = { 
-              todos: [ 
-                      // "push to master",
-                      // "test in prod" 
-                      ] 
-            }
-
-// clear(todos_database)
-// update(todos_database, "String")
-// todos_database.all
 
 router.get('/', (req, res, next) => {
   res.send(
