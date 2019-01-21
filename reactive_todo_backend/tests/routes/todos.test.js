@@ -6,6 +6,7 @@ const request = require('supertest');
 const app = require('../../app'); 
 const db  = require('../../db/db.js');
 
+
 const pry = require('pryjs');
 
 describe('Server', () => {
@@ -15,6 +16,7 @@ describe('Server', () => {
   });
 
   describe('GET /todos', () => {
+
     let expected_data = { todos: [ ] };
 
     it('should respond with empty todo database', (done) => {
@@ -58,16 +60,3 @@ describe('Server', () => {
     });    
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
