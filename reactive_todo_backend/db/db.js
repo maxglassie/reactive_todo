@@ -3,19 +3,21 @@
 const pry    = require('pryjs');
 
 let db = { 
-    todos: [ ],
+    todos: { todos: [ ] } ,
 
     insertOne: function(todo) {
-      this.todos.push(todo);
+      this.todos.todos.push(todo);
     },
   
     clear: function() {
-      this.todos = []
+      this.todos = { todos: [ ] };
     },
 
     all: function() {
       return this.todos;
     }
   }
+
+
 
 module.exports = db;

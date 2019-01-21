@@ -24,3 +24,8 @@ app.use('/ekg', ekgRouter);
 app.use('/todos', todosRouter);
 
 module.exports = app;
+
+// kafka - produces to kafka when receives a POST 
+// how does it do that - does it just send the message as is? 
+// consumes from kafka and prints it
+// no-kafka npm
