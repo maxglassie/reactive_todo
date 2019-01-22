@@ -11,6 +11,7 @@
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "morgan": "~1.9.0",
+    "no-kafka": "^3.4.3",
     "pryjs": "^1.0.3"
   },
   "devDependencies": {
